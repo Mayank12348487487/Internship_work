@@ -1,0 +1,47 @@
+[
+  {
+    "Model":"Week-4 Baseline",
+    "ROC AUC":0.5001965592,
+    "Avg Precision":0.3910876894,
+    "Precision@10":0.4,
+    "Precision@20":0.5,
+    "Precision@50":0.48,
+    "Precision@100":0.4
+  },
+  {
+    "Model":"Logistic Regression",
+    "ROC AUC":0.7002914981,
+    "Avg Precision":0.5215418769,
+    "Precision@10":0.2,
+    "Precision@20":0.35,
+    "Precision@50":0.4,
+    "Precision@100":0.44
+  },
+  {
+    "Model":"Decision Tree",
+    "ROC AUC":0.7415203738,
+    "Avg Precision":0.5753189989,
+    "Precision@10":0.7,
+    "Precision@20":0.55,
+    "Precision@50":0.62,
+    "Precision@100":0.6
+  },
+  {
+    "Model":"Random Forest",
+    "ROC AUC":0.7473724774,
+    "Avg Precision":0.6100580704,
+    "Precision@10":0.9,
+    "Precision@20":0.7,
+    "Precision@50":0.68,
+    "Precision@100":0.7
+  },
+  {
+    "Model":"HistGradientBoosting",
+    "ROC AUC":0.7709657971,
+    "Avg Precision":0.6836482173,
+    "Precision@10":0.9,
+    "Precision@20":0.95,
+    "Precision@50":0.92,
+    "Precision@100":0.87
+  }
+]
