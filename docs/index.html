@@ -607,7 +607,7 @@
         <section id="abstract" class="abstract-card">
             <div class="abstract-title">Abstract</div>
             <p class="abstract-text">
-                In organic search optimization, content freshness and click-through rates are vital to maintain visibility, yet editors cannot manually audit portfolios spanning tens of thousands of pages. We ask: can observable search and engagement signals rank pages by decline risk to prioritize manual review? Using the FlyRank ML Internship dataset of 30,000 anonymized page-level snapshots, we train random forest and gradient boosted classifiers using client-holdout cross-validation. Our champion HistGradientBoosting model achieves a Precision@50 of 92.0% (representing a 1.9× lift over the baseline rule and 2.3× over the naive base rate of 39.1%). We deploy these scores in a hybrid content action playbook, routing pages to targeted review tracks (CTR, thin content, engagement, monitor) to minimize wasted manual review.
+                In organic search optimization, maintaining content relevance is a core challenge. At FlyRank, content editors manage massive page portfolios, yet the editorial team faces a severe resource bottleneck and can only manually audit a tiny fraction of pages weekly. We address this FlyRank content prioritization problem as a case study: can observable search and engagement signals rank pages by decline risk to prioritize manual review? Using the FlyRank dataset of 30,000 anonymized page-level snapshots, we train random forest and gradient boosted classifiers under client-holdout cross-validation. Our champion HistGradientBoosting model achieves a Precision@50 of 92.0% (a 1.92× lift over the baseline heuristic). We deploy these scores in a hybrid content action playbook, routing pages to targeted review tracks (CTR, thin content, engagement, monitor) to resolve the editorial bottleneck.
             </p>
         </section>
 
@@ -615,13 +615,13 @@
         <section id="intro">
             <h2>1. Introduction / Problem Statement</h2>
             <p>
-                Organic search traffic represents the primary growth channel for enterprise portfolios, but search rankings are highly dynamic. Keeping content fresh, relevant, and engaging is essential. However, the business decision of <strong>which content pages to refresh first</strong> is heavily constrained by human labor. A content editor can only review a limited number of pages (typically 50) each week. 
+                Organic search traffic represents the primary growth channel for enterprise portfolios, but search rankings are highly dynamic. Keeping content fresh, relevant, and engaging is essential. At the organic search intelligence firm <strong>FlyRank</strong>, content editors manage massive web catalogs spanning tens of thousands of pages. However, the business decision of <strong>which content pages to refresh first</strong> is heavily constrained by human labor. A content editor can only review a limited number of pages (typically 50) each week, creating a severe operational bottleneck. 
             </p>
             <p>
-                Without algorithmic prioritization, content teams rely on naive heuristics (e.g. sorting by highest traffic loss, or oldest update age). These rules suffer from massive false-positive rates, flagging healthy pages that are experiencing expected seasonal variance or branded search floors, while missing key content in striking distance of page one that is actively decaying.
+                Without algorithmic prioritization, content teams rely on naive heuristics (e.g., sorting by highest traffic loss or oldest update age). These rules suffer from massive false-positive rates, flagging healthy pages that are experiencing expected seasonal variance or branded search floors, while missing key content in striking distance of page one that is actively decaying.
             </p>
             <p>
-                <strong>The ML Frame:</strong> We formalize this decision-support problem as a <strong>ranking and scoring task</strong>. The unit of analysis is a single content page aggregated over a trailing 90-day window. The output is a continuous priority score mapping the probability of organic impression decline. 
+                <strong>Case Study Framing:</strong> This paper presents an applied case study of building an ML-driven opportunity scoring engine to resolve the FlyRank editorial bottleneck. We formalize this decision-support problem as a <strong>ranking and scoring task</strong>. The unit of analysis is a single content page aggregated over a trailing 90-day window. The output is a continuous priority score mapping the probability of organic impression decline. 
             </p>
             <div class="alert">
                 <div class="alert-title"><span class="logo-dot"></span> The Cost of Wrong Calls</div>
